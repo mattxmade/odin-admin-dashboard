@@ -7,8 +7,12 @@
 }
 
 :root {
-  --dashboard-blue: #1992d4;
-  --highlight-yell: #f0b429;
+  --background-grey: #e2e8f0;
+  --highlight-yellow: #f0b429;
+  --heading-black: black;
+  --paragraph-light-black: #636363;
+  --aside-text-white: white;
+  --aside-backg-blue: #1992d4;
 }
 
 html {
