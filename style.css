@@ -95,6 +95,7 @@ nav ul li:first-child {
 input {
   width: 90%;
   border: none;
+  padding: 0.75rem 1rem;
   margin-left: 2rem;
   margin-right: 8rem;
   border-radius: 1.2rem;
@@ -145,13 +146,26 @@ article aside:nth-child(2) {
   grid-template-columns: 1fr 1fr;
 }
 
+.cards-projects .card {
+  overflow: hidden;
+}
+
 .card {
   gap: 0.75rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
   padding: 0 2.75rem;
   border-radius: 1rem;
+}
+
+.card-highlight {
+  left: 0;
+  width: 2%;
+  height: 100%;
+  position: absolute;
+  background-color: var(--card-highlight-yellow);
 }
 
 .card p {
@@ -203,4 +217,4 @@ article aside:nth-child(2) {
   justify-content: center;
   border-radius: 100%;
   background-color: pink;
-}
+}/*# sourceMappingURL=style.css.map */
