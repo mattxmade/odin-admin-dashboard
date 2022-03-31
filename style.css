@@ -48,6 +48,7 @@ button {
   margin: 0 1.1rem;
   border: none;
   border-radius: 2rem;
+  font-weight: 600;
   color: var(--card-background-white);
   background-color: var(--aside-backg-blue);
 }
