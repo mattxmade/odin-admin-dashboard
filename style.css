@@ -111,7 +111,7 @@ button, svg,
     height: 100%;
     min-width: 27rem;
     left: -27rem;
-    position: absolute;
+    position: fixed;
   }
 }
 
