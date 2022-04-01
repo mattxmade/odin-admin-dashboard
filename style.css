@@ -41,6 +41,11 @@ body {
   display: grid;
   grid-template-columns: 0.8fr 3fr;
 }
+@media (max-width: 1200px) {
+  .wrapper {
+    display: flex;
+  }
+}
 
 ul {
   list-style: none;
@@ -67,6 +72,29 @@ button, svg,
   cursor: pointer;
 }
 
+.menu-button {
+  inset: 0;
+  left: -1.3rem;
+  top: 2rem;
+  z-index: 1;
+  visibility: hidden;
+  position: absolute;
+  margin: 0;
+  padding: 0.1rem;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: 5rem;
+  border-radius: 0;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+@media (max-width: 1200px) {
+  .menu-button {
+    visibility: visible;
+  }
+}
+
 .dashboard-aside {
   z-index: 1;
   position: relative;
@@ -76,13 +104,26 @@ button, svg,
   padding: 2.2rem 0;
   color: var(--aside-text-white);
   background-color: var(--aside-backg-blue);
+  transition: 0.3s;
+}
+@media (max-width: 1200px) {
+  .dashboard-aside {
+    height: 100%;
+    min-width: 27rem;
+    left: -27rem;
+    position: absolute;
+  }
+}
+
+.translate-menu {
+  left: 0;
 }
 
 .dashboard-aside .logo-title {
   display: grid;
   align-items: center;
   grid-template-columns: 1fr 2.2fr;
-  padding: 0 2rem;
+  padding: 0 2rem 0 0.5rem;
   margin-bottom: 5.4rem;
 }
 
@@ -121,6 +162,11 @@ main {
   flex-direction: column;
   background-color: var(--background-grey);
 }
+@media (max-width: 690px) {
+  main {
+    overflow: hidden;
+  }
+}
 
 .pfp {
   width: 4rem;
@@ -138,16 +184,26 @@ header {
   gap: 3rem;
   display: flex;
   flex-direction: column;
-  height: 16rem;
+  min-height: 16rem;
   position: relative;
   padding: 1.2rem 4rem;
   box-shadow: 0 0 0.5rem 0.2rem rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 940px) {
+  header {
+    padding-right: 1rem;
+  }
 }
 
 nav ul {
   display: grid;
   align-items: center;
   grid-template-columns: 4.8fr 0.5fr 0.5fr 1fr;
+}
+@media (max-width: 940px) {
+  nav ul {
+    grid-template-columns: 4fr 0.5fr 1.5fr 1fr;
+  }
 }
 
 nav ul li {
@@ -168,6 +224,12 @@ nav ul li:first-child {
 .header-ul {
   display: flex;
   justify-content: space-between;
+}
+@media (max-width: 940px) {
+  .header-ul {
+    gap: 4rem;
+    flex-flow: column-reverse;
+  }
 }
 
 .header-ul .pfp {
@@ -195,15 +257,25 @@ nav ul li:first-child {
   align-items: center;
   grid-template-columns: 1fr 1fr 1fr;
 }
+@media (max-width: 940px) {
+  .header-ul li:last-child {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
 
 input {
   width: 90%;
   border: none;
-  margin-left: 2rem;
-  margin-right: 8rem;
+  margin: 0 8rem 0 2rem;
   padding: 0.75rem 1rem;
   border-radius: 1.5rem;
   background-color: var(--background-grey);
+}
+@media (max-width: 940px) {
+  input {
+    margin: 0 2rem 0 0.5rem;
+  }
 }
 
 input:focus-visible {
@@ -228,6 +300,18 @@ article {
   justify-content: center;
   grid-template-columns: 2.76fr 1fr;
 }
+@media (max-width: 1200px) {
+  article {
+    flex: 1;
+    max-height: 100%;
+    justify-content: start;
+  }
+}
+@media (max-width: 940px) {
+  article {
+    grid-template-columns: 1fr;
+  }
+}
 
 article aside {
   height: 100%;
@@ -246,6 +330,23 @@ article section ul:nth-child(2) {
   flex-grow: 1;
   justify-content: center;
 }
+@media (max-width: 1200px) {
+  article aside,
+article section ul:nth-child(2) {
+    flex-grow: initial;
+    justify-content: start;
+  }
+}
+
+article section ul li {
+  justify-self: flex-end;
+}
+
+@media (max-width: 940px) {
+  article aside {
+    align-items: flex-start;
+  }
+}
 
 article aside h2:first-child,
 article aside:nth-child(2) {
@@ -256,10 +357,25 @@ article aside:nth-child(2) {
   row-gap: 2.8rem;
   grid-template-columns: 1fr 1fr;
 }
+@media (max-width: 690px) {
+  .cards-projects {
+    grid-template-columns: 1fr;
+  }
+}
 
 .cards-projects .card {
   overflow: hidden;
   max-height: 195.03px;
+}
+@media (max-width: 1200px) {
+  .cards-projects .card p {
+    margin: 0.5rem 0 1.5rem;
+  }
+}
+@media (max-width: 690px) {
+  .cards-projects .card {
+    max-width: 90%;
+  }
 }
 
 .card {
@@ -306,6 +422,16 @@ article aside:nth-child(2) {
   height: 100%;
   padding-top: 1rem;
   margin-bottom: 2rem;
+}
+@media (max-width: 1200px) {
+  .cards-announcements {
+    height: initial;
+  }
+}
+@media (max-width: 940px) {
+  .cards-announcements {
+    max-width: 60%;
+  }
 }
 
 .cards-announcements p {
