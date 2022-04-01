@@ -293,10 +293,8 @@ article,
 }
 
 article {
-  height: 78%;
   padding: 2rem;
   max-width: 1280px;
-  max-height: 720px;
   justify-content: center;
   grid-template-columns: 2.76fr 1fr;
 }
@@ -328,7 +326,6 @@ article aside,
 article section ul:nth-child(2) {
   width: 100%;
   flex-grow: 1;
-  justify-content: center;
 }
 @media (max-width: 1200px) {
   article aside,
@@ -419,7 +416,7 @@ article aside:nth-child(2) {
 
 .cards-announcements {
   gap: 2rem;
-  height: 100%;
+  height: 27.5rem;
   padding-top: 1rem;
   margin-bottom: 2rem;
 }
